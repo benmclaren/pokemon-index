@@ -13,8 +13,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        slabo: ['Slabo_27px', 'serif'],
+        ultra: ['Ultra', 'serif'],
+      },
+      colors: {
+        'mint-cream': '#EEF4ED'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
 };
 export default config;

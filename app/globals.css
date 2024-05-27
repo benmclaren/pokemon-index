@@ -18,16 +18,35 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ais-Hits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.ais-RefinementList {
+  width: 20vw;
+}
+
+.ais-RefinementList-count {
+  margin-left: 1rem;
+  opacity: 0.5;
+}
+
+.ais-Hits-item {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-navbar {
+  background: rgb(48,44,98);
+  background: radial-gradient(circle, rgba(48,44,98,1) 0%, rgba(69,76,98,1) 44%, rgba(29,68,117,1) 100%);
 }
