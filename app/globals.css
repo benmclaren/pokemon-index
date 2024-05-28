@@ -28,9 +28,22 @@ body {
 
 .ais-Hits-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 16px;
 }
+
+@media (min-width: 768px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 .ais-RefinementList {
   width: 20vw;
@@ -49,4 +62,19 @@ body {
 .custom-navbar {
   background: rgb(48,44,98);
   background: radial-gradient(circle, rgba(48,44,98,1) 0%, rgba(69,76,98,1) 44%, rgba(29,68,117,1) 100%);
+}
+
+.ais-SearchBox-submit {
+  display: none;
+}
+
+.ais-Pagination-list {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ais-Pagination-item {
+  @apply join-item btn btn-sm md:btn-md md:mx-1;
 }

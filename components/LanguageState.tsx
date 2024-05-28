@@ -1,12 +1,20 @@
-'use client';
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const LanguageContext = createContext();
+interface LanguageProps {
+  language: string;
+  switchLanguage: (lang: any) => void;
+}
+
+const defaultLanguageContext: LanguageProps = {
+  language: 'english',
+  switchLanguage: () => {}, 
+};
+
+const LanguageContext = createContext<LanguageProps>(defaultLanguageContext);
 
 export const useLanguage = () => useContext(LanguageContext);
 
-export const LanguageProvider = ({ children }) => {
+export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
   const [language, setLanguage] = useState('english');
 
   useEffect(() => {
@@ -16,13 +24,15 @@ export const LanguageProvider = ({ children }) => {
     }
   }, []);
 
-  const switchLanguage = (lang) => {
+  const switchLanguage = (lang: string) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
   };
 
+  const contextValue = { language, switchLanguage };
+
   return (
-    <LanguageContext.Provider value={{ language, switchLanguage }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );
