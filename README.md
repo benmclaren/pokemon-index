@@ -38,10 +38,10 @@ npm install
 
 This project uses the following technologies and tools:
 
-- Next.js: React framework for server-side rendering and static site generation
-- TypeScript: Typed JavaScript for better development experience
-- Tailwind CSS: Utility-first CSS framework for styling
-- ESLint: Linting tool for maintaining code quality
+- **Next.js**: React framework for server-side rendering and static site generation
+- **TypeScript**: Typed JavaScript for better development experience
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **ESLint**: Linting tool for maintaining code quality
 
 ### Project Structure
 - **app**: Contains the main application components and pages
