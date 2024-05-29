@@ -1,6 +1,5 @@
 import { BaseHit } from 'instantsearch.js'
 import { useLanguage } from "./LanguageState";
-import Image from 'next/image';
 
 interface HitProps {
   hit: BaseHit

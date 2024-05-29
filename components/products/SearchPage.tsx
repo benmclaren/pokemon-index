@@ -1,12 +1,7 @@
 "use client"
 
-import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Hits, RangeInput, RefinementList, Pagination } from 'react-instantsearch';
-import { RangeSlider as SpectrumRangeSlider } from '@adobe/react-spectrum';
 import 'rc-slider/assets/index.css';
-import { useLanguage } from '../../components/LanguageState';
-import LanguageSwitcher from '../../components/LanguageSwitcher';
-import Nav from "@/components/navbar";
 import CustomRangeSlider from '../CustomRangeSlider';
 import Hit from '../Hit';
 import SearchFilters from '../SearchFilters';
